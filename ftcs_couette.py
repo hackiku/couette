@@ -3,19 +3,11 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-def ftcs_couette():
-    h = 1.0  # Distance betw een the plates in meters
-    u_g = 1.0  # Speed of the upper plate in m/s
+def ftcs_couette(h, u_g, Ny, dt, total_time, Dy):
 
     # Discretization parameters
-    Ny = 100  # Number of grid points in y direction
     dy = h / (Ny - 1)  # Grid spacing in y direction
-    dt = 0.0001  # Time step in seconds, chosen for stability
-    total_time = 2.0  # Total time for the simulation in seconds
     num_steps = int(total_time / dt)  # Number of time steps
-
-    # Diffusion coefficient for the y direction
-    Dy = 0.001  
 
     # Prepare the array for u(y,t) with initial condition u(y,0) = 0
     u = np.zeros(Ny)
