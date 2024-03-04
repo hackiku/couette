@@ -63,7 +63,7 @@ def main():
     ftcs_couette_code = inspect.getsource(ftcs_couette)
     with st.expander("Click to reveal Python code"):
         st.code(ftcs_couette_code, language='python')
-    with open('./ftcs_couette.m', 'r') as file:
+    with open('./pages/ftcs_couette.m', 'r') as file:
         output = file.read()
         st.code(output, language='matlab')
 
@@ -83,7 +83,7 @@ def main():
     with st.expander("Click to reveal Python code"):
         st.code(laasonen_couette_code, language='python')
     
-    with open('./laasonen_couette.m', 'r') as file:
+    with open('./pages/laasonen_couette.m', 'r') as file:
         output = file.read()
         st.code(output, language='matlab')
 
